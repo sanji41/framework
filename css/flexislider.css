@@ -1,0 +1,101 @@
+/*-----------------------------------------------------------------------------------*/
+/* = Image Slider
+/*-----------------------------------------------------------------------------------*/
+
+/* FlexSlider necessary styles */
+.flexslider {width: 100%; margin: 0; padding: 0;}
+.flexslider .slides{ margin: 0; list-style: none; }
+.flexslider .slides > li {display: none;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {
+	max-width: 100%;
+	display: block;
+}
+.flex-pauseplay span {text-transform: capitalize;}
+
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+html[xmlns] .slides {display: block;} 
+* html .slides {height: 1%;}
+
+.no-js .slides > li:first-child {display: block;}
+
+
+/*slider wrap */
+#slider-wrap{
+	width: 100%;
+	position: relative;
+	margin-bottom: 30px;
+}
+
+/*homepage specific*/
+.full-slides img{
+	width: 100%;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+.full-slides .slides_container {
+	width: 100%;
+	display: none;
+}
+.full-slides .slides_container .slide{
+	display: block;
+	width: 100%;
+}
+.full-slides .caption{
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	background: #000;
+	color: #fff;
+	font-weight: 700;
+	font-size: 13px;
+	-moz-opacity: 0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+	text-align: center;
+}
+.slides .caption p{
+	padding: 15px;
+	margin: 0;
+}
+
+/*control nav & arrows*/
+.flex-control-nav{
+	display: none;
+}
+ul.flex-direction-nav, li.flex-direction-nav{list-style-type:none;margin:0;padding:0 !important;}
+.flex-direction-nav li a.next,
+.flex-direction-nav li a.prev {
+    position: absolute;
+    display: block;
+    z-index: 101;
+	font-size: 21px;
+	height: 80px;
+	width: 50px; 
+	line-height: 80px;
+	color: #fff;
+	background: #000;
+    display: block;
+    position: absolute;
+	top: 50%;
+	margin-top: -40px;
+    cursor: pointer;
+	text-align: center;
+	-moz-opacity: 0.4;
+    -khtml-opacity: 0.4;
+    opacity: 0.4;
+}
+.flex-direction-nav li a.next {
+    right: 0;
+}
+.flex-direction-nav li a.prev {
+    left: 0;
+}
+.flex-direction-nav li a.prev:hover,
+.flex-direction-nav li a.next:hover {
+	text-decoration: none;
+	background: #000;
+	-moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+}
