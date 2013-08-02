@@ -11,8 +11,8 @@
 //get custom post type === > Slides
 $args = array(
 	'post_type' =>'slides',
-	'numberposts' => -1,
-	'order' => 'ASC'
+	'numberposts' => vp_option('sl_slide'),
+	'order' => 'DESC'
 );
 $slides = get_posts($args);
 ?>

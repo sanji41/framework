@@ -49,7 +49,7 @@
 						<footer>
 							<?php
 					        //post tags
-							if(of_get_option('blog_tags') =='1') {
+							if(vp_option('tg_tags') =='1') {
 								the_tags('<p class="tags"><span class="icon">C</span> Tags: ', ', ', '</p>');
 							}
 							?>
@@ -67,7 +67,7 @@
 
                     <?php
 					//author bio
-					if(of_get_option('blog_bio') =='1') { ?>
+					if(vp_option('tg_author') =='1') { ?>
 			        <div id="single-author" class="clearfix">
 			            <h3 class="heading"><span><?php _e('','framework'); ?></span></h3>
 			            <div id="author-image">
@@ -82,9 +82,9 @@
 
 						</footer> <!-- end article footer -->
 
-						<?php //framework_related_posts(); ?>
-
+						<?php if(vp_option('tg_post') =='1') { ?>	
 						<?php get_template_part( 'includes/related-post' ); ?>
+						<?php } ?>
 					
 					</article> <!-- end article -->
 					

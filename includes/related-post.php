@@ -1,6 +1,5 @@
 <?php
 		//start related posts section if not disabled
-		if(of_get_option('blog_related') =='1') {
 			$category = get_the_category(); //get first current category ID
 			$this_post = $post->ID; // get ID of current post
 			
@@ -41,5 +40,4 @@
 					</section> 
 					<!-- /related-posts --> 
 			<?php } // no posts found
-		} //related posts section disabled
 		?>

@@ -1,5 +1,5 @@
 		</div> <!-- end #container -->
-		<?php if(of_get_option('widgetized_footer')) { ?>
+		<?php if(vp_option('tg_footer')){ ?>
 			<footer role="contentinfo">
 				<div class="foot-wrap">
 					<div id="inner-footer" class="clearfix">
