@@ -13,7 +13,7 @@
 						
 						<header>
 							
-							<h1><?php _e("Epic 404 - Article Not Found", "sanztheme"); ?></h1>
+							<h1><?php _e("Epic 404 - Article Not Found", "framework"); ?></h1>
 						
 						</header> <!-- end article header -->
 					

@@ -32,7 +32,7 @@
 	</nav>
 	
 	<ol class="commentlist">
-		<?php wp_list_comments('type=comment&callback=framework_comments'); ?>
+		<?php wp_list_comments(''); ?>
 	</ol>
 	
 	<nav id="comment-nav">

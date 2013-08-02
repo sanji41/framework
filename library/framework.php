@@ -51,7 +51,7 @@ add_filter('excerpt_more', 'framework_excerpt_more');
 // Adding WP 3+ Functions & Theme Support
 function framework_theme_support() {
 	add_theme_support('post-thumbnails');      // wp thumbnails (sizes handled in functions.php)
-	set_post_thumbnail_size(125, 125, true);   // default thumb size
+	set_post_thumbnail_size(150, 150, true);   // default thumb size
 	add_theme_support( 'custom-background' );  // wp custom background
 	add_theme_support('automatic-feed-links'); // rss thingy
 	// to add header image support go here: http://themble.com/support/adding-header-background-image-support/
@@ -94,6 +94,7 @@ function framework_main_nav() {
     		'menu' => 'main_nav', /* menu name */
     		'theme_location' => 'main_nav', /* where in the theme it's assigned */
     		'container_class' => 'menu clearfix', /* container class */
+    		'menu_class' => 'sf-menu',
     		'fallback_cb' => 'framework_main_nav_fallback' /* menu fallback */
     	)
     );
@@ -139,6 +140,7 @@ function framework_related_posts() {
         $related_posts = get_posts($args);
         if($related_posts) {
         	foreach ($related_posts as $post) : setup_postdata($post); ?>
+        		<h3 class="h2">Related Post</h3>
 	           	<li class="related_post"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
 	        <?php endforeach; } 
 	    else { ?>

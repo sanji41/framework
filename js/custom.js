@@ -63,8 +63,8 @@ jQuery(function($){
 		
 		//homepage slides
 		$('.flexslider').flexslider({
-			animation: "fade", //Select your animation type (fade/slide)
-			slideshow: true, //Should the slider animate automatically by default? (true/false)
+			animation: "slide", //Select your animation type (fade/slide)
+			slideshow: false, //Should the slider animate automatically by default? (true/false)
 			slideshowSpeed: 6000, //Set the speed of the slideshow cycling, in milliseconds
 			animationDuration: 600, //Set the speed of animations, in milliseconds
 			directionNav: true, //Create navigation for previous/next navigation? (true/false)

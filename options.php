@@ -110,49 +110,127 @@ function optionsframework_options() {
 	'desc' => __('Upload a favicon on your theme, size must be 16px by 16px', 'options_framework_theme'),
 	'id' => 'favicon',
 	'type' => 'upload');
-		
+
+	$options['widgetized_footer'] = array(
+		'name' => __('Widgetized Footer?', 'options_framework_theme'),
+		'desc' => __('Check box to enable the widgetized footer area.', 'options_framework_theme'),
+		'id' => 'widgetized_footer',
+		'std' => '1',
+		'type' => 'checkbox');
+
+	$options[] = array( "name" => __('Custom CSS', 'options_framework_theme'),
+						"desc" => __('If you would like to make light styling modifications, you can add custom CSS here. If you are going to make heavy modifications to the theme, consider doing them in a <a href="http://codex.wordpress.org/Child_Themes">child theme</a>.', 'options_framework_theme'),
+						"id" => "custom_css",
+						"std" => "",
+						"type" => "textarea"); 		
 		
 
 	// Advanced Settings Tab
+	// $options[] = array(
+	// 	'name' => __('Social Settings', 'options_framework_theme'),
+	// 	'type' => 'heading');
+
+	// $options[] = array(
+	// 	'name' => __('Facebook URL', 'options_framework_theme'),
+	// 	'desc' => __('Enter your facebook link here.', 'options_framework_theme'),
+	// 	'id' => 'fb',
+	// 	'std' => 'Facebook URL',
+	// 	'type' => 'text');
+
+	// $options[] = array(
+	// 	'name' => __('Twitter URL', 'options_framework_theme'),
+	// 	'desc' => __('Enter your twitter link here.', 'options_framework_theme'),
+	// 	'id' => 'tw',
+	// 	'std' => 'Twitter URL',
+	// 	'type' => 'text');
+
+	// $options[] = array(
+	// 	'name' => __('Pinterest URL', 'options_framework_theme'),
+	// 	'desc' => __('Enter your pinterest link here.', 'options_framework_theme'),
+	// 	'id' => 'pn',
+	// 	'std' => 'Pinterest URL',
+	// 	'type' => 'text');
+
+	// $options[] = array(
+	// 	'name' => __('Instagram URL', 'options_framework_theme'),
+	// 	'desc' => __('Enter your instagram link here.', 'options_framework_theme'),
+	// 	'id' => 'in',
+	// 	'std' => 'Instagram URL',
+	// 	'type' => 'text');
+
 	$options[] = array(
-		'name' => __('Social Settings', 'options_framework_theme'),
+		'name' => __('Blog', 'options_framework_theme'),
 		'type' => 'heading');
+		
+	$options[] = array(
+		'name' => __('Author Bio?', 'options_framework_theme'),
+		'desc' => __('Check box to enable featured images on single blog posts.', 'options_framework_theme'),
+		'id' => 'blog_bio',
+		'std' => '1',
+		'type' => 'checkbox');
+			
+	$options[] = array(
+		'name' => __('Tags?', 'options_framework_theme'),
+		'desc' => __('Check box to enable featured images on single blog posts.', 'options_framework_theme'),
+		'id' => 'blog_tags',
+		'std' => '1',
+		'type' => 'checkbox');
+		
+	$options[] = array(
+		'name' => __('Related Posts?', 'options_framework_theme'),
+		'desc' => __('Check box to enable featured images on single blog posts.', 'options_framework_theme'),
+		'id' => 'blog_related',
+		'std' => '1',
+		'type' => 'checkbox');
+
+	// Custom
+	$options[] = array(
+		'name' => __('Customize', 'options_framework_theme'),
+		'type' => 'heading' );
+
+	 $options[] = array(
+    'name' =>  __('Font Color', 'options_framework_theme'),
+    'desc' => __('Change your Font color here, the default is #777777', 'options_framework_theme'),
+    'id' => 'color',
+    'type' => "color");
 
 	$options[] = array(
-		'name' => __('Facebook URL', 'options_framework_theme'),
-		'desc' => __('Enter your facebook link here.', 'options_framework_theme'),
-		'id' => 'fb',
-		'std' => 'Facebook URL',
-		'type' => 'text');
+    'name' =>  __('Link Color', 'options_framework_theme'),
+    'desc' => __('Change your Link color here, the default is #70706E', 'options_framework_theme'),
+    'id' => 'font-color',
+    'type' => "color");
 
-	$options[] = array(
-		'name' => __('Twitter URL', 'options_framework_theme'),
-		'desc' => __('Enter your twitter link here.', 'options_framework_theme'),
-		'id' => 'tw',
-		'std' => 'Twitter URL',
-		'type' => 'text');
+    $options[] = array(
+    'name' =>  __('Link Hover Color', 'options_framework_theme'),
+    'desc' => __('Change your Link Hover color here, the default is #70706E', 'options_framework_theme'),
+    'id' => 'font-color-hover',
+    'type' => "color");
 
-	$options[] = array(
-		'name' => __('Pinterest URL', 'options_framework_theme'),
-		'desc' => __('Enter your pinterest link here.', 'options_framework_theme'),
-		'id' => 'pn',
-		'std' => 'Pinterest URL',
-		'type' => 'text');
+    $options[] = array( 
+    "name" => "Header Font",
+	"desc" => "Choose a font from the <a href='http://google.com/webfonts'>Google WebFont Directory</a> and type its name in the text field.",
+	"id" => 'header_font',
+	"std" => "",
+	"type" => "text");
 
-	$options[] = array(
-		'name' => __('Instagram URL', 'options_framework_theme'),
-		'desc' => __('Enter your instagram link here.', 'options_framework_theme'),
-		'id' => 'in',
-		'std' => 'Instagram URL',
-		'type' => 'text');
-	
-	
+    $options[] = array( 
+    "name" => "Paragraph Font",
+	"desc" => "Choose a font from the <a href='http://google.com/webfonts'>Google WebFont Directory</a> and type its name in the text field.",
+	"id" => 'paragraph_font',
+	"std" => "",
+	"type" => "text");
 	
 	// Tab
 	$options[] = array(
-		'name' => __('Text Editor', 'options_framework_theme'),
+		'name' => __('Support', 'options_framework_theme'),
 		'type' => 'heading' );
 
+	$options[] = array( "name" => __('Theme Documentation & Support', 'options_framework_theme'),
+						"desc" => "<p>Theme support and documentation is available for all customers. Visit <a target='blank' href='http://sanjaykhemlani.com/contacts/'>Support</a> to get started. Please include a detailed description of the issue, and wait for my response within 48hrs.</p>
+
+							<p>For more Wordpress / Web Design needs, please contact me by clicking <a target='blank' href='http://sanjaykhemlani.com/contacts/'>here</a>.</p>
+						",
+						"type" => "info");	
 	
 
 	return $options;
